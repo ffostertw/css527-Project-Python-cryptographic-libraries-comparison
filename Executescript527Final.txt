@@ -1,0 +1,42 @@
+#! /bin/bash
+# This is a script run the python code of the project.
+clear
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+echo "Start Execute Kevin's Final Project."
+
+echo "Install the pip, further install the required crypto libraries."
+
+echo "Press [ENTER]: to install pip and building essentials."
+read i
+sudo apt-get install python-pip python-dev build-essential 
+echo"Install pip."
+sudo pip install --upgrade pip
+echo
+echo "Press [ENTER]: to install virtualenv "
+read i 
+echo"Install virtualenv."
+sudo pip install --upgrade virtualenv 
+
+
+echo "Install the required libraries:"
+echo "Press [ENTER]: to install m2crypto "
+read i 
+echo "Install m2crypto:"
+sudo apt-get install python-m2crypto
+sudo pip install m2crypto
+echo
+echo "Press [ENTER]: to install pydes "
+read i 
+echo "Install pydes:"
+sudo pip install pydes
+echo
+echo "Press [ENTER]: to install pycrypto "
+read i 
+echo "Install pycrypto"
+sudo pip install pycrypto
+echo 
+echo "Press [ENTER]: to execute Kevin Wu's 527 Final project. "
+read i 
+echo "Start execute the project code in python."
+python 527Final.py
